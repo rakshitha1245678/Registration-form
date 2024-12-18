@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Registration Form</title>
+    <link rel="stylesheet" href="style.css"> <!-- Linking external CSS -->
+</head>
+<body>
+    <div class="form-container">
+        <h2>Conference Registration</h2>
+        <form action="register.php" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="track">Track</label>
+                <select id="track" name="track" required>
+                    <option value="Technology">Technology</option>
+                    <option value="Business">Business</option>
+                    <option value="Healthcare">Healthcare</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Sessions</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="sessions[]" value="Session 1"> Session 1</label>
+                    <label><input type="checkbox" name="sessions[]" value="Session 2"> Session 2</label>
+                    <label><input type="checkbox" name="sessions[]" value="Session 3"> Session 3</label>
+                    <label><input type="checkbox" name="sessions[]" value="Session 4"> Session 4</label>
+                </div>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
